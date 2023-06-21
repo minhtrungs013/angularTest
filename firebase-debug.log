@@ -1,0 +1,33 @@
+[debug] [2023-06-14T07:44:30.088Z] ----------------------------------------------------------------------
+[debug] [2023-06-14T07:44:30.089Z] Command:       /home/dmtrung/.nvm/versions/node/v16.14.0/bin/node /home/dmtrung/.nvm/versions/node/v16.14.0/bin/firebase use --add
+[debug] [2023-06-14T07:44:30.089Z] CLI Version:   12.3.1
+[debug] [2023-06-14T07:44:30.090Z] Platform:      linux
+[debug] [2023-06-14T07:44:30.090Z] Node Version:  v16.14.0
+[debug] [2023-06-14T07:44:30.090Z] Time:          Wed Jun 14 2023 14:44:30 GMT+0700 (Indochina Time)
+[debug] [2023-06-14T07:44:30.090Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-14T07:44:30.095Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-06-14T07:44:30.150Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-14T07:44:30.150Z] > authorizing via signed-in user (dominhtrung2k@gmail.com)
+[debug] [2023-06-14T07:44:30.151Z] > refreshing access token with scopes: []
+[debug] [2023-06-14T07:44:30.152Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-06-14T07:44:30.152Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-06-14T07:44:30.240Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2023-06-14T07:44:30.325Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at invalidCredentialError (/home/dmtrung/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/auth.js:144:12)
+    at refreshTokens (/home/dmtrung/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/auth.js:508:15)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.getAccessToken (/home/dmtrung/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/apiv2.js:149:23)
+    at async Client.addAuthHeader (/home/dmtrung/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/apiv2.js:140:21)
+    at async Client.request (/home/dmtrung/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/apiv2.js:96:34)
+    at async getProjectPage (/home/dmtrung/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/management/projects.js:238:17)
+    at async getFirebaseProjectPage (/home/dmtrung/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/management/projects.js:255:23)
+    at async listFirebaseProjects (/home/dmtrung/.nvm/versions/node/v16.14.0/lib/node_modules/firebase-tools/lib/management/projects.js:286:29)
+[error] 
+[error] Error: Failed to list Firebase projects. See firebase-debug.log for more info.
+[warn] ⚠  Unable to fetch the CLI MOTD and remote config. 
+[debug] [2023-06-14T07:44:30.415Z] Failed to fetch MOTD FirebaseError: Failed to make request to https://firebase-public.firebaseio.com/cli.json
